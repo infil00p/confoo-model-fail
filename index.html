@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/kframe/master/dist/kframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene fog="type: linear; color: #aaa; near: 25;">
+      <a-sky color="#44F"></a-sky>
+      <a-assets>
+         <a-asset-item id="west_van" src="models/West_Van_Collada_Green.dae"></a-asset-item>
+         <a-asset-item id="howe_sound" src="models/HoweSound.dae"></a-asset-item>
+         <a-asset-item id="richmond" src="models/Richmond.dae"></a-asset-item>
+      </a-assets>
+      <a-light type="point" color="#AAA" position="0 5 0"></a-light>
+      <a-entity position="-362 -32 -359" scale="1000 1000 1000" collada-model="#howe_sound"></a-entity>
+      <a-entity position="-362 -31.05 635" scale="1000 1000 1000" collada-model="#richmond"></a-entity>
+      <a-entity position="0 0 -4" scale="1000 1000 1000" collada-model="#west_van"></a-entity>
+      <a-plane src="#water" color="#22F" position="0 -11.05 0" height="1000" width="1000" rotation="-90 0 0"></a-plane>
+      <a-camera position="0 0 -3">
+          <a-cursor color="#2E3A87"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
